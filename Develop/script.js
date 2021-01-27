@@ -11,10 +11,9 @@ $(".deleteBtn").click(function() {
 
 function changeColor() {
     let currentHour = moment().hours()
-    console.log(currentHour)
 $(".time-block").each(function() {
 let calendarHour= parseInt($(this).attr("id"))
-console.log (calendarHour)
+
 if(calendarHour<currentHour) {
     $(this).addClass("past")
 }
@@ -32,14 +31,13 @@ else {
 changeColor()
 
 
-$("#9 .description").val(localStorage.getItem("9"))
-$("#10 .description").val(localStorage.getItem("10"))
-$("#11 .description").val(localStorage.getItem("11"))
-$("#12 .description").val(localStorage.getItem("12"))
 $("#1 .description").val(localStorage.getItem("1"))
 $("#2 .description").val(localStorage.getItem("2"))
 $("#3 .description").val(localStorage.getItem("3"))
 $("#4 .description").val(localStorage.getItem("4"))
 $("#5 .description").val(localStorage.getItem("5"))
-
+$("#6 .description").val(localStorage.getItem("6"))
+$("#7 .description").val(localStorage.getItem("7"))
+$("#8 .description").val(localStorage.getItem("8"))
+$("#9 .description").val(localStorage.getItem("9"))
 
