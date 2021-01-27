@@ -5,7 +5,7 @@ $(".saveBtn").click(function() {
 })
 $(".deleteBtn").click(function() {
     let time=$(this).parent().attr("id")
-    let text=$(this).siblings(".description").empty(); 
+    let text=$(this).siblings(".description").remove; 
     localStorage.setItem(time, text)
 })
 
@@ -41,3 +41,13 @@ $("#7 .description").val(localStorage.getItem("7"))
 $("#8 .description").val(localStorage.getItem("8"))
 $("#9 .description").val(localStorage.getItem("9"))
 
+var NowDate = new Date();
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var sMonth = NowDate.getMonth() + 1;
+var sDay = NowDate.getDate();
+var sYear = NowDate.getFullYear();
+var sHour = NowDate.getHours();
+var sMinutes = NowDate.getMinutes();
+var sSeconds = NowDate.getSeconds();
+var eDisplayDate = document.getElementById('displayJsDate');
+eDisplayDate.innerHTML = sMonth+'-'+sDay+'-'+sYear+' '+sHour+':'+sMinutes+':'+sSeconds;
